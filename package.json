@@ -1,0 +1,25 @@
+{
+  "name": "ham_and_eggs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hamAndEggs.spec.js",
+  "scripts": {
+    "test": "jasmine ./spec/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehatfield57/hamAndEggs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ehatfield57/hamAndEggs/issues"
+  },
+  "homepage": "https://github.com/ehatfield57/hamAndEggs#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "jasmine": "^2.6.0"
+  },
+  "dependencies": {
+  }
+}

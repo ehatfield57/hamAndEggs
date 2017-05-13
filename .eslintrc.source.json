@@ -1,0 +1,79 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "commonjs": true,
+    "jquery": true
+  },
+  "globals": {
+    "angular": false,
+    "_": false,
+    "Zone": false,
+    "zone": false,
+    "sjcl": false,
+    "Big": false
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-bitwise": 2,
+    "camelcase": 2,
+    "curly": 2,
+    "eqeqeq": 2,
+    "wrap-iife": [
+      2,
+      "any"
+    ],
+    "no-use-before-define": [
+      2,
+      {
+        "functions": false
+      }
+    ],
+    "new-cap": 2,
+    "no-caller": 2,
+    "quotes": [
+      2,
+      "single",
+      { "allowTemplateLiterals": true }
+    ],
+    "no-undef": 2,
+    "no-unused-vars": 2,
+    "strict": [
+      2,
+      "function"
+    ],
+    "dot-notation": 0,
+    "no-unused-expressions": 2,
+    "max-len": [
+      2,
+      {
+        "code": 120,
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "new-parens": 2,
+    "no-lonely-if": 2,
+    "no-tabs": 2,
+    "no-trailing-spaces": 2,
+    "semi": 2,
+    "brace-style": 2,
+    "comma-spacing": 2,
+    "eol-last": 2,
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": 2
+
+  }
+}
