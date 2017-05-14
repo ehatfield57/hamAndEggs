@@ -24,7 +24,7 @@ class Letter {
     });
   }
 
-  * numbers() {
+  *numbers() {
     while (this.numberList.length)
       yield this.numberList.shift();
   }
