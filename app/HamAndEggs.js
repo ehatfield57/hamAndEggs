@@ -15,13 +15,10 @@ class HamAndEggs {
     this.uniqueLetters.forEach( letterString => {
       this.Symbols[letterString] = new Letter(letterString, this.rulesThatApply(letterString));
     });
-    console.log('Hi Edward, Symbols:', this.Symbols);
   }
 
   rulesThatApply(letterString) {
-    let foo = this.rules.filter( rule => rule[0] === letterString );
-    console.log('Hi Edward, letter:', letterString, ', foo:', foo);
-    return foo;
+    return this.rules.filter( rule => rule[0] === letterString );
   }
 
   extractUniqueLetters() {
