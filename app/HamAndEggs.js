@@ -1,4 +1,5 @@
 const Letter = require('./Letter');
+const Sequencer = require('./Sequencer');
 
 class HamAndEggs {
   constructor(operator, words, total, rules) {
@@ -15,6 +16,8 @@ class HamAndEggs {
     this.uniqueLetters.forEach( letterString => {
       this.Symbols[letterString] = new Letter(letterString, this.rulesThatApply(letterString));
     });
+
+    this.sequencer = new Sequencer(this.Symbols);
   }
 
   rulesThatApply(letterString) {
