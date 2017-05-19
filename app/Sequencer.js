@@ -1,3 +1,5 @@
+const LetterValue = require('./LetterValue');
+
 class Sequencer {
   constructor(symbols) {
     this.symbols = symbols;
@@ -5,17 +7,13 @@ class Sequencer {
   }
 
   setup() {
-    this.sequences = Object.keys(this.symbols).map( letter => {
-      return {
-        letter: letter,
-        baseNumbers: this.symbols[letter].numberList,
-        running: false
-      };
+    this.letterValues = Object.keys(this.symbols).map( letter => {
+      return new LetterValue(letter, this.symbols[letter].numberList);
     });
 
     // Place the sequences in order based on how many numbers there are
-    this.sequences.sort( (a,b) => {
-      return a.baseNumbers.length - b.baseNumbers.length;
+    this.letterValues.sort( (a,b) => {
+      return a.baseNumbersCount - b.baseNumbersCount;
     });
 
     this.index = 0;
@@ -23,13 +21,12 @@ class Sequencer {
   }
 
   *sequences() {
-    let thisSequence = this.sequences[this.index];
+    let letter = this.letterValues[this.index];
 
-    if (! thisSequence.running) {
-      thisSequence.running = true;
-      thisSequence.idx = 0;
+    if (! letter.running) {
+      letter.running = true;
+      letter.idx = 0;
     }
-
   }
 }
 
