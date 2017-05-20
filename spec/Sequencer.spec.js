@@ -5,50 +5,33 @@ describe('Sequencer', () => {
     "A": {
       "letter": "A",
       "rules": [ "A#0" ],
-      "numberList": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+      "numberList": [ 1, 2 ]
     },
-    "D": {
-      "letter": "D",
+    "B": {
+      "letter": "B",
       "rules": [],
-      "numberList": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+      "numberList": [ 0, 1, 2 ]
     },
-    "E": {
-      "letter": "E",
-      "rules": [ "E=1" ],
+    "C": {
+      "letter": "C",
+      "rules": [ "C=1" ],
       "numberList": [ 1 ]
-    },
-    "G": {
-      "letter": "G",
-      "rules": [],
-      "numberList": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-    },
-    "H": {
-      "letter": "H",
-      "rules": [ "H#0" ],
-      "numberList": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-    },
-    "M": {
-      "letter": "M",
-      "rules": [],
-      "numberList": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-    },
-    "N": {
-      "letter": "N",
-      "rules": [],
-      "numberList": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-    },
-    "S": {
-      "letter": "S",
-      "rules": [],
-      "numberList": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
     }
   };
 
   it('should be an instance of Sequencer', () => {
-    let sequencer = new Sequencer(symbolsData) ;
+    let sequencer = new Sequencer(symbolsData);
     expect(sequencer instanceof Sequencer).toBe(true);
   });
 
-  it('should...', () => {
+  it('should generate a sequence', () => {
+    let sequencer = new Sequencer(symbolsData);
+    let sequences = sequencer.sequences();
+
+    let combos = [...sequences];
+    expect(combos.length).toBe(1);
+    expect(combos[0].A).toBe(2);
+    expect(combos[0].B).toBe(0);
+    expect(combos[0].C).toBe(1);
   });
 });

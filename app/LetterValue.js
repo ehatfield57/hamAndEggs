@@ -2,16 +2,15 @@ class LetterValue {
   constructor(letter, baseNumbers) {
     this.letter = letter;
     this.baseNumbers = baseNumbers;
-    this.running = false;
-    this.numberList = baseNumbers.slice();
+    this.reset();
   }
 
-  baseNumbersCount() {
-    return this.baseNumbers.length;
+  reset() {
+    this.numberList = this.baseNumbers.slice();
   }
 
   numbersLeft() {
-    return this.numberList.length > 0;
+    return this.numberList.length;
   }
 
   removeTaken(takenNumbers) {
