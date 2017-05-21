@@ -1,5 +1,6 @@
 const Letter = require('./Letter');
 const Sequencer = require('./Sequencer');
+const TestMath = require('./TestMath');
 
 class HamAndEggs {
   constructor(operator, words, total, rules) {
@@ -18,6 +19,7 @@ class HamAndEggs {
     });
 
     this.sequencer = new Sequencer(this.Symbols);
+    this.testMath = new TestMath(this.op, this.words, this.total);
   }
 
   rulesThatApply(letterString) {
@@ -31,7 +33,7 @@ class HamAndEggs {
         if (! letters.includes(letter)) {
           letters.push(letter);
         }
-      })
+      });
     });
     return letters.sort();
   }
