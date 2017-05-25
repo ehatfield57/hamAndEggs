@@ -1,12 +1,8 @@
 const HamAndEggs = require('../app/HamAndEggs');
 
-const fullRules = [
-  'E=1', 'H#0', 'A#0'
-];
-
 describe('Test HamAndEggs puzzler', () => {
   it('should create a hamAndEggs instance', () => {
-    let hamAndEggs = new HamAndEggs('+', ['HAM', 'AND'], 'EGGS', ['E=1','H#0','A#0']);
+    let hamAndEggs = new HamAndEggs('+', ['HAM', 'AND'], 'EGGS');
     expect(hamAndEggs instanceof HamAndEggs).toBe(true);
   });
 
@@ -16,7 +12,7 @@ describe('Test HamAndEggs puzzler', () => {
   });
 
   it('should create a hamAndEggs instance', () => {
-    let hamAndEggs = new HamAndEggs('+', ['HAM', 'AND'], 'EGGS', ['E=1','H#0','A#0']);
+    let hamAndEggs = new HamAndEggs('+', ['HAM', 'AND'], 'EGGS');
     expect(hamAndEggs instanceof HamAndEggs).toBe(true);
   });
 });

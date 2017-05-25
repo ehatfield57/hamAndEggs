@@ -20,7 +20,6 @@ class TestMath {
         break;
       default:
         console.error(`I dont know how to do ${this.operator} yet`);
-        exit;
         break;
     }
 
